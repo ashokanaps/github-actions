@@ -8,3 +8,14 @@ jobs:
     steps:
     - name: Print Hello World
       run: echo "Hello World!!"
+
+    - name: Clone repository
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Run a Python file
+      run: python hello.py
